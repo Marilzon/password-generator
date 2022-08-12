@@ -1,5 +1,15 @@
 {
   "devDependencies": {
     "electron": "^20.0.2"
-  }
+  },
+  "name": "password-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

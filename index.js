@@ -11,3 +11,5 @@ app.on('ready', () => {
 
     mainWindow.loadURL(`file://${__dirname}/index.html`)
 })
+
+app.disableHardwareAcceleration()

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EKT - Password Generator</title>
+    <title>ELECTRON - Password Generator</title>
 </head>
 
 <body>
@@ -14,9 +14,10 @@
             <h1>Welcome to ELECTRON Password Generator</h1>
 
             <div class="input-group">
-                <label for="">Qual tamanho da senha?</label>
-                <input type="number" id="password-width" min="7">
-                <button onclick="generatePassword()">Generate Password</button>
+                <label for="input-width-selector">Qual tamanho da senha? </label>
+                <select name="input-width-selector" id="input-width-selector" onchange="rangeOfPassword()"></select>
+                <input type="text" id="target-range">
+                <button class="generator-button" onclick="generatePassword()">Generate Password</button>
             </div>
 
             <div id="newPassword"></div>
@@ -24,6 +25,8 @@
     </div>
 
 </body>
-<script src="./src/scripts.js"></script>
+
+<script crossorigin src="./src/js/scripts.js"></script>
+<link rel="stylesheet" href="./src/css/style.css">
 
 </html>

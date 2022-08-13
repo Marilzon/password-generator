@@ -15,7 +15,7 @@ function generatePassword() {
         return
     }
 
-    if (passwordWidth.value < 1>) {
+    if (passwordWidth.value < 1) {
         alert('Tamanho da senha precisar ser maior que 0!')
         return
     }

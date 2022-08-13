@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,500&display=swap');
+
+:root {
+    font-weight: 400;
+
+    --white: #FFF;
+    --bg-light: #C5F6FF;
+    --font-color: #454545;
+    --light-orange: #ffd38b;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+    background-color: var(--bg-light);
+    color: var(--font-color);
+}
+
+container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.select-group {
+    width: 80px;
+    height: 50px;
+    font-size: 20px;
+    background: var(--font-color);
+    color: var(--white);
+    text-align: center;
+    margin: 0 0.5rem;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--white);
+    padding: 3rem 0;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    color: var(--font-color);
+    padding: 1rem 0.2rem;
+}
+
+.password-container {
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    background-color: var(--light-orange);
+    color: var(--white);
+    padding: 2rem;
+    transition: 0.1s ease-in-out;
+}
+
+.generator-button {
+    padding: 1rem;
+    background-color: var(--font-color);
+    color: var(--white);
+    margin: 1rem;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.generator-button:hover {
+    opacity: 0.9;
+}

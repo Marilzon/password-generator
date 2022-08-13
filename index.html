@@ -11,15 +11,15 @@
 <body>
     <div class="container">
         <div class="content">
-            <h1>Welcome to ELECTRON Password Generator</h1>
+            <h1 class="title">Passwords Generador - Gerador de Senhas</h1>
 
             <div class="input-group">
-                <label for="input-width-selector">Qual tamanho da senha? </label>
-                <select name="input-width-selector" id="input-width-selector"></select>
-                <button class="generator-button" onclick="generatePassword()">Generate Password</button>
+                <label class="input-label" for="input-width-selector"><h3>Qual tamanho da senha?</h3></label>
+                <select class="select-group " name="input-width-selector" id="input-width-selector"></select>
+                <button class="generator-button" onclick="generatePassword()">Gerar senha</button>
             </div>
 
-            <div id="newPassword"></div>
+            <div class="password-container" id="newPassword"></div>
         </div>
     </div>
 

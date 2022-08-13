@@ -15,13 +15,14 @@ function createNumberOptions() {
 }
 createNumberOptions()
 
-function rangeOfPassword() {
-    let rangeSelected = inputWidthSelector.value
-    document.getElementById("target-range").value = rangeSelected
+function onChangePasswordWidthOption() {
+    let setValue = inputWidthSelector.value
+    return setValue
 }
 
+inputWidthSelector.addEventListener("change", onChangePasswordWidthOption)
+
 function generatePassword() {
-    let valueOfPasswordWitth = document.querySelector("#target-range").value
     let password = ""
 
     newPassword.innerHTML = ""
@@ -36,9 +37,7 @@ function generatePassword() {
             .charAt(Math.floor(Math.random() * charModelsToPassword.length))
     }
 
-    valueOfPasswordWitth = parseInt(valueOfPasswordWitth)
-
-    password = password.substring(0, valueOfPasswordWitth)
+    password = password.substring(0, onChangePasswordWidthOption())
 
     let passwordResult = document.createTextNode(password)
     return newPassword.appendChild(passwordResult)

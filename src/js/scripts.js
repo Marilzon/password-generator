@@ -5,7 +5,7 @@ const optionField = document.querySelector(".option-field")
 
 function createNumberOptions() {
     let selector = []
-    for (i = 1; i <= 100; i++) {
+    for (let i = 6; i <= 28; i++) {
         selector.push(`<option class='option-field' value='${i}'>${i}</option>`)
     }
 
@@ -42,3 +42,5 @@ function generatePassword() {
     let passwordResult = document.createTextNode(password)
     return newPassword.appendChild(passwordResult)
 }
+
+generatorButton.addEventListener("click", generatePassword)

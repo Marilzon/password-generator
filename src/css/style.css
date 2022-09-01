@@ -4,9 +4,7 @@
     font-weight: 400;
 
     --white: #FFF;
-    --bg-light: #C5F6FF;
-    --font-color: #454545;
-    --light-orange: #ffd38b;
+    --light-dark: #454545;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -22,66 +20,90 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100vh;
 
-    background-color: var(--bg-light);
-    color: var(--font-color);
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(110deg, #2b2b2b 60%, #434250 60%);
+    color: var(--white);
 }
 
-container {
-    width: 100%;
-    height: 100%;
+.main {
     display: flex;
     flex-direction: column;
+
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-label {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .select-group {
     width: 80px;
-    height: 50px;
     font-size: 20px;
-    background: var(--font-color);
-    color: var(--white);
+    background: var(--white);
+    color: var(--light-dark);
     text-align: center;
-    margin: 0 0.5rem;
-}
-
-.input-group {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    background-color: var(--white);
-    padding: 3rem 0;
-}
-
-.title {
-    width: 100%;
-    text-align: center;
-    color: var(--font-color);
-    padding: 1rem 0.2rem;
-}
-
-.password-container {
-    font-size: 3rem;
-    display: block;
-    text-align: center;
-    background-color: var(--light-orange);
-    color: var(--white);
-    padding: 2rem;
-    transition: 0.1s ease-in-out;
 }
 
 .generator-button {
     padding: 1rem;
-    background-color: var(--font-color);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--light-dark);
     margin: 1rem;
     cursor: pointer;
     transition: 0.1s ease-in-out;
+    font-weight: bold;
 }
 
 .generator-button:hover {
     opacity: 0.9;
+}
+
+.password-container {
+    margin: 0 auto;
+    font-size: 2rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 720px) {
+    body {
+        font-size: 70%;
+    }
+
+    .main {
+        padding: 1rem;
+    }
+
+    .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .input-label {
+        text-align: center;
+    }
+
+    .password-container {
+        width: 90%;
+        font-size: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
 }

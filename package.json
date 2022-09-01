@@ -1,16 +1,42 @@
 {
     "devDependencies": {
-        "electron": "^20.0.2",
-        "electron-packager": "^15.5.1"
+        "electron": "^20.1.1",
+        "electron-builder": "^23.3.3"
     },
     "name": "password-generator",
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
         "dev": "electron .",
-        "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=images/icon.png --prune=true --out=release-builds",
-        "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=images/icon.png --prune=true --out=release-builds",
-        "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=images/icon.png --prune=true --out=release-builds"
+        "build": "electron-builder build   "
+    },
+    "build": {
+        "productName": "Password Generator",
+        "appId": "scripter.PSGen",
+        "publish": [
+            {
+                "provider": "github",
+                "owner": "Marilzon",
+                "repo": "password-generator"
+            }
+        ],
+        "win": {
+            "target": [
+                "portable"
+            ],
+            "publish": [
+                "github"
+              ],
+              "icon": "src/images/icon.ico"
+        },
+        "portable": {
+            "artifactName": "Password-Generator.exe"
+        },
+        "directories": {
+            "output": "electron/output",
+            "app": ".",
+            "buildResources": "electron/buildResources"
+        }
     },
     "keywords": [],
     "author": "",
